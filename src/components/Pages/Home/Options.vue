@@ -94,8 +94,15 @@
       >
         <el-button type="primary" @click="OutputExcel">导出Excel</el-button>
       </download-excel>
+      <br />
+      <br />
+      <!-- TODO  导出图片-->
+      <!-- <screen-capture ref="sc" :html="html"></screen-capture> -->
+      <el-button type="primary" @click="OutputImage">导出图片</el-button>
+      <br />
+      <br />
+      <el-button type="primary" @click="OutputPDF">导出PDF</el-button>
     </div>
-    <div></div>
   </div>
 </template>
 
@@ -165,13 +172,10 @@ export default {
         fitView: this.fitView
       });
     },
-
-    OutputImage() {},
-
-    OutputExcel() { 
-      var mind_data = this.$store.getters.get_mind_data;   
-      this.project_name = mind_data[0]["name"];   
-      this.module_num = mind_data[0]["children"].length;    
+    OutputExcel() {
+      var mind_data = this.$store.getters.get_mind_data;
+      this.project_name = mind_data[0]["name"];
+      this.module_num = mind_data[0]["children"].length;
       var module_info_array = mind_data[0]["children"];
       for (let index = 0; index < module_info_array.length; index++) {
         const module_info_array_element = module_info_array[index];
@@ -197,7 +201,7 @@ export default {
               module_info_array_element.children[index3];
             this.json_data[index1][module_info_array_element.name][
               suite_caseinfo_element.name
-            ] = {}; 
+            ] = {};
             for (
               let index4 = 0;
               index4 < module_info_array_element.children.length;
@@ -257,7 +261,7 @@ export default {
         }
       );
     },
-   
+
     saveFile(data, filename) {
       let save_link = document.createElementNS(
         "http://www.w3.org/1999/xhtml",
@@ -289,23 +293,23 @@ export default {
 
     OutputPDF() {
       let name = "MindMake";
-      let shareContent = document.body, 
-        width = shareContent.clientWidth, 
-        height = shareContent.clientHeight, 
-        canvas = document.createElement("canvas"), 
-        scale = 2; 
-      canvas.width = width * scale; 
-      canvas.height = height * scale; 
+      let shareContent = document.body,
+        width = shareContent.clientWidth,
+        height = shareContent.clientHeight,
+        canvas = document.createElement("canvas"),
+        scale = 1;
+      canvas.width = width * scale;
+      canvas.height = height * scale;
       canvas.style.width = shareContent.clientWidth * scale + "px";
       canvas.style.height = shareContent.clientHeight * scale + "px";
-      canvas.getContext("2d").scale(scale, scale); 
+      // canvas.getContext("2d").scale(scale, scale);
       let opts = {
-        scale: scale, 
-        canvas: canvas, 
-        logging: false, 
-        width: width, 
+        scale: scale,
+        canvas: canvas,
+        logging: false,
+        width: width,
         height: height,
-        useCORS: true 
+        useCORS: true
       };
 
       html2canvas(shareContent, opts).then(() => {
@@ -330,7 +334,7 @@ export default {
             }
           }
         }
-        PDF.save(name + ".pdf"); 
+        PDF.save(name + ".pdf");
       });
     }
   },
