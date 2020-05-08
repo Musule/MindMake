@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@hellowuxin/mindmap": "^1.6.2",
     "@notadd/vue-screen-capture": "^1.0.1",
     "echarts": "^4.6.0",
     "exceljs": "^3.8.2",
@@ -59,7 +60,6 @@
     "schart.js": "^2.0.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
-    "test-data-generate": "^1.0.3",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue": "^2.5.2",
