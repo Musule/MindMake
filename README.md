@@ -4,7 +4,21 @@
 
 思维导图编写测试用例，导出多种格式文件数据
 
-## 使用
+## 直接使用
+
+直接使用，打开目录下index.html文件即可
+
+```
+./dist/index.html
+```
+
+![img](./static/demo3.png)
+
+
+![img](./static/demo4.png)
+
+
+## 二次开发
 
 ### 1.假设你的电脑已安装nodejs环境
 
