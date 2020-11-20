@@ -4,6 +4,8 @@
 
 思维导图编写测试用例，导出多种格式文件数据
 
+recommend: [China-Gitee](https://gitee.com/liyinchi/MindMake)，[Other-Github](https://github.com/Musule/MindMake)
+
 ## 直接使用
 
 直接使用，打开目录下index.html文件即可
