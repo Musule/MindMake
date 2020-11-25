@@ -27,7 +27,16 @@ tool  | version
 ------------- | -------------
  nodejs  | >8.17.0
 
-### 1.假设你的电脑已安装nodejs环境
+### 1.安装nodejs环境
+
+下载Nodejs
+
+（建议版本使用v12.13.0 小于v15.0）
+
+>https://npm.taobao.org/mirrors/node/v12.13.0/
+
+>如果已安装配置nodejs，可跳过此步骤
+
 
 ### 2.设置淘宝镜像
 ```
