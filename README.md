@@ -1,5 +1,7 @@
 # MindMake
 
+[![vue](https://img.shields.io/badge/vue-v2.5.2-blue.svg)](https://cn.vuejs.org/) [![webpack](https://img.shields.io/badge/webpack-v3.6.0-lightgrey.svg)](https://webpack.github.io/)[![nodejs](https://img.shields.io/badge/node-v8.11.0-green.svg)](https://nodejs.org/en/blog/release/v8.11.0/)
+
 ## 功能
 
 思维导图编写测试用例，导出多种格式文件数据
